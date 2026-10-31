@@ -1,0 +1,73 @@
+# 源码、依赖锁文件、配置样例、配方和 schema 应提交。
+# release/ 保存打包源码与配置，不作为产物目录忽略。
+
+# Node / Electron / Vite：依赖、工具缓存与明确的构建输出。
+node_modules/
+.npm/
+.pnpm-store/
+.vite/
+.cache/
+*.tsbuildinfo
+/bin/
+/build/
+/dist/
+/out/
+/desktop/build/
+/desktop/dist/
+/desktop/out/
+/frontend/build/
+/frontend/dist/
+
+# 历史 Python 原型：虚拟环境、字节码与工具缓存。
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 测试覆盖率与报告；不忽略测试源码、样例数据或普通 *.out 文件。
+coverage/
+.nyc_output/
+.coverage
+.coverage.*
+htmlcov/
+/coverage.out
+/test-results/
+/playwright-report/
+
+# 日志与操作系统 / 编辑器临时文件。
+*.log
+*.log.[0-9]*
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+
+# 本地环境配置；示例文件应保留，不在其中填写真实凭据。
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.*.example
+!.env.*.sample
+!.env.*.template
+/configs/*.local.json
+!/configs/*.local.example.json
+!/configs/*.local.sample.json
+!/configs/*.local.template.json
+
+# 工作台的本地开发数据统一放此目录（含数据库、材料和凭据）。
+# 不全局忽略 *.json、*.db 或 *.sqlite，以保留配方、schema 和测试夹具。
+/.dev-data/
+
+# 私有安装材料与迁移归档，不提交到源码仓库。
+*.AppImage
+*.deb
+*.zahbundle
+*.zahbundle.partial
